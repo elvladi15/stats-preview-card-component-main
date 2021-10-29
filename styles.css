@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+:root {
+  /* PRIMARY */
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  /* NEUTRAL */
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-headings: hsla(0, 0%, 100%, 0.6);
+}
+html {
+  font-size: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 65%;
+  margin: 2rem;
+}
+.mainContent {
+  background-color: var(--dark-desaturated-blue);
+  color: var(--white);
+  padding: 4rem;
+  flex: 1;
+  width: 52%;
+  font-family: "Lexend Deca", sans-serif;
+}
+.title {
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
+}
+.highlightedText {
+  color: var(--soft-violet);
+}
+.mainContent p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--slightly-transparent-white-paragraph);
+  margin: 3rem 0;
+}
+.bottomRow {
+  display: flex;
+  font-family: "Inter", sans-serif;
+}
+.bottomRowItem {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+.quantity {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.itemName {
+  color: var(--slightly-transparent-white-headings);
+  font-weight: 700;
+}
+.rightImage {
+  width: 48%;
+}
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    width: 350px;
+  }
+  .title {
+    text-align: center;
+  }
+  .mainContent {
+    padding: 2rem;
+  }
+  .mainContent p {
+    text-align: center;
+  }
+  .bottomRow {
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    justify-content: space-between;
+  }
+  .bottomRowItem {
+    margin: 0;
+  }
+  .rightImage {
+    width: 100%;
+  }
+  .mainContent {
+    order: 2;
+    width: 100%;
+  }
+}
